@@ -1,6 +1,6 @@
 # Contribution
 
-We welcome all contributions to this project! 
+We welcome all contributions to this project! <br>
 If you notice a bug, or have a feature request, 
 please open up an issue [here](https://github.com/DSCI-310/DSCI-310-Group-3/issues) and kindly report the issue you found. 
 If you'd like to contribute a feature or bug fix, 
