@@ -8,4 +8,4 @@ feel free to fork our repo and submit a pull request. <br>
 We will review pull requests within 30 days. <br>
 
 
-All contributors must abide by our [code of conduct](CODE_OF_CONDUCT.md). Please review to code of conduct before submitting any pull requests. <br>
+**All contributors must abide by our [code of conduct](CODE_OF_CONDUCT.md). Please review to code of conduct before submitting any pull requests.** <br>
