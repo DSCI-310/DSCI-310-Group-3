@@ -2,7 +2,7 @@
 
 We welcome all contributions to this project! 
 If you notice a bug, or have a feature request, 
-please open up an issue [here](https://github.com/UBC-DSCI/DSCI-310-Group-3/issues) and kindly report the issue you found. 
+please open up an issue [here](https://github.com/DSCI-310/DSCI-310-Group-3/issues) and kindly report the issue you found. 
 If you'd like to contribute a feature or bug fix, 
 feel free to fork our repo and submit a pull request. 
 We will review pull requests within 30 days. 
