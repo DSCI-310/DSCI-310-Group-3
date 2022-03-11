@@ -1,12 +1,13 @@
 import pytest
 import numpy as np
 import pandas as pd
+import sys
 sys.path.append(".")
-from Python import regression
+from Python import regression as r
 
 x = [1,2]
 y = [2,4]
-results = pd.DataFrame(regression(x,y))
+results = pd.DataFrame(r.regression(x,y))
 
 # note: regression gives the following values, not exactly '2' and '0'
 expected_m = 1.9999999999999991
