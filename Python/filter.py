@@ -14,5 +14,5 @@
 #'
 #' @examples
 #' filter(df, education, "Bachelors")
-def filter(data, col, val):
-    return null
+def filter(data, col, value):
+    return data[data[col] == value]
