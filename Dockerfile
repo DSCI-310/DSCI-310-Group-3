@@ -1,4 +1,4 @@
-FROM jupyter/base-notebook
+FROM jupyter/base-notebook:notebook-6.4.8
 
 # Install Python 3 packages. 
 RUN conda install -c anaconda numpy=1.22.2
