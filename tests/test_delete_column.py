@@ -1,6 +1,9 @@
-from pandas.testing import assert_frame_equal
+import pytest
 import pandas as pd
-from ..Python.remove_column import remove_column
+import numpy as np
+import sys
+sys.path.append(".")
+from Python.remove_column import remove_column as rc
 
 # assign data of lists.  
 data = {'Name': ['Tom', 'Joseph', 'Krish', 'John'], 'Age': [20, 21, 19, 18]}
@@ -12,6 +15,6 @@ df = pd.DataFrame(data)
 expected_a = pd.DataFrame(data_a)
 expected_b = pd.DataFrame(data_b)
 
-assert data_a == data.remove_column(data, 'Age')
-assert data_b == data.remove_column(data, 'Name')
+assert expected_a.equals(rc(df, 'Age'))
+assert expected_b.equals(rc(df, 'Name'))
 
