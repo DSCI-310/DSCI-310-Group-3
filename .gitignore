@@ -1,2 +1,3 @@
 .ipynb_checkpoints
 .virtual_documents/analyze_census_data.ipynb
+__pycache__
