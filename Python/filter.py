@@ -13,6 +13,6 @@
 #' @export
 #'
 #' @examples
-#' filter(df, education, "Bachelors")
+#' filter(df, education, " Bachelors")
 def filter(data, col, value):
     return data[data[col] == value]
