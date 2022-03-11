@@ -7,5 +7,10 @@ If you'd like to contribute a feature or bug fix,
 feel free to fork our repo and submit a pull request. <br>
 We will review pull requests within 30 days. <br>
 
+## Core Members
+Alex Khadra, Damien Fung, Ryan Lazenby
+
+## Contributors
+Giuseppe Tinti Tomio, Tiffany Timbers
 
 **All contributors must abide by our [code of conduct](CODE_OF_CONDUCT.md). Please review to code of conduct before submitting any pull requests.** <br>
