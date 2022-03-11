@@ -12,7 +12,6 @@
 #' @export
 #'
 #' @examples
-#' count_classes(df, df_column_name)
-remove_columns <- function(data_frame, column_name) {
-  # returns a data frame with two columns: class and count
-}
+#' remove_column(df, df_column_name)
+def remove_column(df, column_name):
+  #return new data frame with removed columns 
