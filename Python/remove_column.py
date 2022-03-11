@@ -14,4 +14,4 @@
 #' @examples
 #' remove_column(df, df_column_name)
 def remove_column(df, column_name):
-    return del df['column_name']
+    return del df[column_name]
