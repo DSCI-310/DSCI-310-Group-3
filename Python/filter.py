@@ -15,4 +15,4 @@
 #' @examples
 #' filter(df, education, " Bachelors")
 def filter(data, col, value):
-    return data[data[col] == value]
+    return data[data[col].str.contains(value)]
