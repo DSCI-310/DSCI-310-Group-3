@@ -17,4 +17,5 @@ expected_b = pd.DataFrame(data_b)
 
 assert expected_a.equals(rc(df, 'Age'))
 assert expected_b.equals(rc(df, 'Name'))
+assert df.equals(rc(df, 'Does_not_exist'))
 
