@@ -13,6 +13,7 @@ Our data set includes columns:
 
 - **age** Current age of person
 - **workclass** In what sector their occupation is in
+- **fnlwgt** A weighting variable calculated by the Census Bureau 
 - **education** Current level of education
 - **education-num** How many years of education
 - **marital-status** Whether a person is married or not
