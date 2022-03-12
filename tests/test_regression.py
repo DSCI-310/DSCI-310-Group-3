@@ -15,3 +15,8 @@ expected_b = 1.25607396694702e-15
 expected = pd.DataFrame([expected_m, expected_b])
 
 assert expected.equals(results)
+
+
+def testLinAlgError():
+    with pytest.raises(Exception):
+        results = regression([0,0],[0,0])

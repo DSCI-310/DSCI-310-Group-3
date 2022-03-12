@@ -10,3 +10,6 @@ df = pd.DataFrame({'a': ["Foo", "Bar"], 'b' : [1, 2]})
 expected = pd.DataFrame({'a': ["Foo"], 'b' : [1]})
 assert expected.equals(f(df, "a", "Foo"))
 
+assert f(df, "a", "NonExistent").empty
+
+
