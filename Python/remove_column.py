@@ -14,7 +14,4 @@
 #' @examples
 #' remove_column(df, df_column_name)
 def remove_column(df, column_name):
-    if column_name in df.columns:
         return df.drop(column_name, 1, inplace=False)
-    else:
-        return df
