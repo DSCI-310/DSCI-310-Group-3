@@ -7,11 +7,11 @@ from src.regression import regression
 
 x = [1,2]
 y = [2,4]
-results = pd.DataFrame(regression(x,y))
+results = pd.DataFrame(regression(x,y)).round(decimals=0)
 
 # note: regression gives the following values, not exactly '2' and '0'
-expected_m = 1.9999999999999991
-expected_b = 1.25607396694702e-15
+expected_m = 2.0
+expected_b = 0.0
 expected = pd.DataFrame([expected_m, expected_b])
 
 assert expected.equals(results)
