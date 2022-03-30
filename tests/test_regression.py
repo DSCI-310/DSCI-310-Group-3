@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import sys
 sys.path.append(".")
-from Python.regression import regression
+from src.regression import regression
 
 x = [1,2]
 y = [2,4]
