@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import sys
 sys.path.append(".")
-from Python.remove_column import remove_column as rc
+from src.remove_column import remove_column as rc
 
 # assign data of lists.  
 data = {'Name': ['Tom', 'Joseph', 'Krish', 'John'], 'Age': [20, 21, 19, 18]}
