@@ -12,7 +12,7 @@
 #' @export
 #'
 #' @examples
-#' python ./src/visualize_data.py './data/adult.data' './data/adult_data_plot.csv' '0' '2' 
+#' python ./src/visualize_data.py './data/adult.data' './data/adult_data_plot.png' '0' '2' 
 import sys
 import argparse
 import pandas as pd
@@ -39,7 +39,7 @@ y_col = df.iloc[:, y]
 
 m, b = regression(x_col, y_col)
 
-plt.scatter(x_col, y_col)
-plt.plot(x_col, m*x_col+b)
+plt.scatter(x_col, y_col, color = "#66DEFF")
+plt.plot(x_col, m*x_col+b, color = "#F57C36")
 
-# TODO: save to path
+plt.savefig(path)
