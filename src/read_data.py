@@ -9,7 +9,6 @@ from src.remove_column import remove_column
 #data = pd.read_csv(path, header=None)   ## Path should be the output of download_data script
 
 def read_clean_data(data_path): #param should be from downlaod_data script
-    data_path = path #should this be added?
     raw_data = pd.read_csv(data_path, header=None)
     names = ['age',
         'workclass',
