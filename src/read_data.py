@@ -31,35 +31,3 @@ def read_clean_data(data_path): #param should be from downlaod_data script
     raw_data = remove_column(raw_data, "sex")
     return raw_data.head()
 
-
-
-
-
-### Old version:
-# prepare column names
-#names = ['age',
-#        'workclass',
-#        'fnlwgt',
-#        'education',
-#        'education-num',
-#        'marital-status',
-#        'occupation',
-#        'relationship',
-#        'race',
-#        'sex',
-#        'capital-gain',
-#        'capital-loss',
-#        'hours-per-week',
-#        'native-country',
-#        'income']
-
-# assign column names
-#data.columns = names
-
-# drop some unused columns
-#data = remove_column(data, "race")
-#data = remove_column(data, "sex")
-
-# view examples in dataset
-#data.head()
-
