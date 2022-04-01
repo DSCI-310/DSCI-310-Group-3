@@ -317,73 +317,65 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="data">
 <h4>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h4>
 <p>Data is stored in a 4mb .data file from <a class="reference external" href="https://archive-beta.ics.uci.edu/ml/datasets/census+income">https://archive-beta.ics.uci.edu/ml/datasets/census+income</a>, which functions as a .csv file. The column names, as well as other information on the dataset, are in the accompanying .names file.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span><span class="p">:</span> <span class="n">SHOW</span> <span class="n">DATASET</span>
-</pre></div>
-</div>
 <p>The education-num data is not the years spent in formal education, but an ordinal representation of the education category. Matching the values by counting the number of occurrences in the data, we can find the intended pairs:</p>
 <p><strong>Education Numbers Meaning</strong>:</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Number</p></th>
-<th class="head"><p>Meaning</p></th>
+<th class="head"><p><strong>1</strong></p></th>
+<th class="head"><p><strong>2</strong></p></th>
+<th class="head"><p><strong>3</strong></p></th>
+<th class="head"><p><strong>4</strong></p></th>
+<th class="head"><p><strong>5</strong></p></th>
+<th class="head"><p><strong>6</strong></p></th>
+<th class="head"><p><strong>7</strong></p></th>
+<th class="head"><p><strong>8</strong></p></th>
+<th class="head"><p><strong>9</strong></p></th>
+<th class="head"><p><strong>10</strong></p></th>
+<th class="head"><p><strong>11</strong></p></th>
+<th class="head"><p><strong>12</strong></p></th>
+<th class="head"><p><strong>13</strong></p></th>
+<th class="head"><p><strong>14</strong></p></th>
+<th class="head"><p><strong>15</strong></p></th>
+<th class="head"><p><strong>16</strong></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>1</strong></p></td>
+<tr class="row-even"><td><p>Meaning</p></td>
 <td><p>Preschool</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>2</strong></p></td>
 <td><p>1st-4th</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>3</strong></p></td>
 <td><p>5th-6th</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>4</strong></p></td>
 <td><p>7th-8th</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>5</strong></p></td>
 <td><p>9th</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>6</strong></p></td>
 <td><p>10th</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>7</strong></p></td>
 <td><p>11th</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>8</strong></p></td>
 <td><p>12th</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>9</strong></p></td>
 <td><p>HS-grad</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>10</strong></p></td>
 <td><p>Some-college</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>11</strong></p></td>
 <td><p>Assoc-voc</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>12</strong></p></td>
 <td><p>Assoc-acdm</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>13</strong></p></td>
 <td><p>Bachelors</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>14</strong></p></td>
 <td><p>Masters</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>15</strong></p></td>
 <td><p>Prof-school</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>16</strong></p></td>
 <td><p>Doctorate</p></td>
 </tr>
 </tbody>
 </table>
+<div class="figure align-default" id="ed-hours-plot">
+<a class="reference internal image-reference" href="_images/ed_hours_plot.png"><img alt="_images/ed_hours_plot.png" src="_images/ed_hours_plot.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Level of Education vs Hours Worked per Week</span><a class="headerlink" href="#ed-hours-plot" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="canada-plot">
+<a class="reference internal image-reference" href="_images/canada_plot.png"><img alt="_images/canada_plot.png" src="_images/canada_plot.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Level of Education vs Hours Worked per Week (Canadians only)</span><a class="headerlink" href="#canada-plot" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="usa-plot">
+<a class="reference internal image-reference" href="_images/usa_plot.png"><img alt="_images/usa_plot.png" src="_images/usa_plot.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Level of Education vs Hours Worked per Week (Americans only)</span><a class="headerlink" href="#usa-plot" title="Permalink to this image">¶</a></p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: PLOT education-num to hours-per-week</span>
-<span class="c1"># TODO: EMBED PRESECHOOL, BACHELORS, DOCTORATES AND 3 DOCTORATES INLINE</span>
-<span class="c1"># TODO: EMBED CANADA PLOTS/DATA ONLY</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: EMBED PRESECHOOL, BACHELORS, DOCTORATES AND 3 DOCTORATES INLINE</span>
 </pre></div>
 </div>
 </div>
@@ -393,20 +385,15 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="discussion">
 <h2>Discussion:<a class="headerlink" href="#discussion" title="Permalink to this headline">¶</a></h2>
-<p>Looking at our graph above, we can that there is a positive correlation between education level and hours worked. Someone with minimal education would likely not have a full time job, and people with bachelors or doctorates tend to work slightly more (This could be due to most working exactly 40, and some working many more). Following the trend to a higher number like 20, a rough equivalent of 3 PhDs, brings us to an estimate of 47.49 hours worked a week.</p>
+<p>Looking at <a class="reference internal" href="#ed-hours-plot"><span class="std std-numref">Fig. 1</span></a>, we can that there is a positive correlation between education level and hours worked. Someone with minimal education would likely not have a full time job, and people with bachelors or doctorates tend to work slightly more (This could be due to most working exactly 40, and some working many more). Following the trend to a higher number like 20, a rough equivalent of 3 PhDs, brings us to an estimate of 47.49 hours worked a week.</p>
 <p>There are many possible explanations as to why this exists. One possibility is that this is caused by students still in school, who have low education levels and would only work part time. Another is that jobs with lower education requirements do not allow for advancement to full time work, or that jobs with higher requirements are more demanding.</p>
 <p>However we can also see that our predictive model is misleading as the model predicts that pre-school kids work 33.98 hours  per week. We know that this is incorrect. This does not mean that people in pre-school work 33.98 hours a week but that people that only completed pre-school and nothing else sometime in the past now work that many hours.</p>
-<p>Looking at the graphs for Canada and USA only, we can see that there actually is a negative correlation between hours worked and education level. This can be because at higher education levels you may still be spending a lot of time studying rather than learning hence your hours stay the same. The working hours for education level are almost consistent at 40hrs which is the standard full time job in Canada and USA hence it makes sense that it is consistent with all education levels as it just means everyone is working standard full time hours.</p>
+<p>Looking at the graphs for Canada (<a class="reference internal" href="#canada-plot"><span class="std std-numref">Fig. 2</span></a>) and USA (<a class="reference internal" href="#usa-plot"><span class="std std-numref">Fig. 3</span></a>) only, we can see that there actually is a negative correlation between hours worked and education level. This can be because at higher education levels you may still be spending a lot of time studying rather than learning hence your hours stay the same. The working hours for education level are almost consistent at 40hrs which is the standard full time job in Canada and USA hence it makes sense that it is consistent with all education levels as it just means everyone is working standard full time hours.</p>
 <p>Analyzing other variables in this data-set such as age could offer hints as to which explanation is correct. To be certain and to distinguish if this is truly causation or just correlation would likely require gathering more detailed data from other sources.</p>
 </div>
 <div class="section" id="references">
 <h2>References:<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">bibliography</span><span class="p">}</span>
-<span class="p">:</span><span class="n">style</span><span class="p">:</span> <span class="n">unsrtalpha</span>
-<span class="p">:</span><span class="nb">filter</span><span class="p">:</span> <span class="n">docname</span> <span class="ow">in</span> <span class="n">docnames</span>
-</pre></div>
-</div>
-</div>
+<span class="target" id="id1"></span></div>
 </div>
 
     <script type="text/x-thebe-config">
