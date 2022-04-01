@@ -1,10 +1,13 @@
-# add documentation 
+#' read data, clean it and save it as a new csv
+#'
+#' Download data from local path, perform cleaning on it, and save it locally to provided relative local path
+#' 
+#' @param raw-data a local path to read data from
+#' @param path a local path/filename to write the file to and what to call it 
 
 import pandas as pd
-from src.download_data import path
 from src.remove_column import remove_column
 import argparse
-import sys
 
     
 # load data, specifying there are no column names included in a header
