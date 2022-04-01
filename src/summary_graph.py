@@ -24,11 +24,10 @@ chart = args.chart
 
 df = pd.read_csv(data, header=None)
 
-data = {'Number of observations': [len(df.index)],
-        'average education':  [df["education-num"].mean()],
-        'average hours worked': [df["hours-per-week"].mean()],
-        'average capital gain': [df["capital-gain"].mean()]
-        }
+data = [['Number of observations', [len(df.index)]],
+        ['average education',  [df["education-num"].mean()]],
+        ['average hours worked', [df["hours-per-week"].mean()]],
+        ['average capital gain', [df["capital-gain"].mean()]]]
 
 new_df = pd.DataFrame(data)
 
