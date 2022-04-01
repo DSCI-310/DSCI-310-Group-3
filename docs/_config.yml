@@ -1,0 +1,10 @@
+# In _config.yml
+title: Analyzing Education's effect on Time Spent Working
+author: Alex Khadra, Damien Fung, Ryan Lazenby
+execute:
+  execute_notebooks: force
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+    
