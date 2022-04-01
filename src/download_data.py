@@ -10,11 +10,12 @@
 #' @export
 #'
 #' @examples
-#' python ./src/download_data.py 'https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data' '../data/adult.data' 
+#' python ./src/download_data.py 'https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data' './data/adult.data' 
 import argparse
 import shutil
-import urllib3
+import requests
 import os
+import pandas as pd
 
 parser = argparse.ArgumentParser(description='Download data from a source (either URL or relative local path) and save it locally to provided relative local path')
 parser.add_argument('source', metavar='source', type=str, help='a source (either URL or relative local path) to download data from')
@@ -27,4 +28,12 @@ path = args.path
 if (os.path.exists(source)):
     shutil.copyfile(source, path)
 else:
-    urllib3.request.urlretrieve(source,path)
+    try:
+        request = requests.get(source)
+        request.status_code == 200
+    except Exception as req:
+        print("Requested data at the provided URL/path does not exist")
+        print(req)
+
+    data = pd.read_csv(source)
+    data.to_csv(path)
