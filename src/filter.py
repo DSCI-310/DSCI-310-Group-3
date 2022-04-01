@@ -14,5 +14,11 @@
 #'
 #' @examples
 #' filter(df, education, " Bachelors")
+from pandas import DataFrame as DF
+
 def filter(data, col, value):
+    
+    if type(data) != DF:
+        raise Exception("Expected DataFrame, got", type(data))
+    
     return data[data[col].str.contains(value)]
