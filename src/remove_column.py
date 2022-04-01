@@ -13,7 +13,14 @@
 #'
 #' @examples
 #' remove_column(df, df_column_name)
+
+from pandas import DataFrame as DF
+
 def remove_column(df, column_name):
+    
+    if type(df) != DF:
+        raise Exception("Expected DataFrame, got", type(df))
+    
     if column_name in df.columns:
         return df.drop(column_name, 1, inplace=False)
     else:

@@ -15,6 +15,10 @@
 from numpy import polyfit
 
 def regression(x, y):
-    m, b = polyfit(x, y, 1)
+    
+    try:
+        m, b = polyfit(x, y, 1)
+    except:
+        print("Regression polyfit expects two lists of numbers")
     
     return m, b
