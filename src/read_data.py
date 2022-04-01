@@ -3,15 +3,11 @@
 #' Download data from local path, perform cleaning on it, and save it locally to provided relative local path
 #' 
 #' @param raw-data a local path to read data from
-#' @param path a local path/filename to write the file to and what to call it 
+#' @param clean-data a local path/filename to save clean data as csv file
 
 import pandas as pd
 from src.remove_column import remove_column
 import argparse
-
-    
-# load data, specifying there are no column names included in a header
-#data = pd.read_csv(path, header=None)   ## Path should be the output of download_data script
 
 parser = argparse.ArgumentParser(description='Reads and cleans data')
 parser.add_argument('raw_data', metavar='source', type=str, help='a local path/filename pointing to the raw data')
@@ -56,31 +52,4 @@ new_data.to_csv('clean_data')
 
 
 
-### Old version:
-# prepare column names
-#names = ['age',
-#        'workclass',
-#        'fnlwgt',
-#        'education',
-#        'education-num',
-#        'marital-status',
-#        'occupation',
-#        'relationship',
-#        'race',
-#        'sex',
-#        'capital-gain',
-#        'capital-loss',
-#        'hours-per-week',
-#        'native-country',
-#        'income']
-
-# assign column names
-#data.columns = names
-
-# drop some unused columns
-#data = remove_column(data, "race")
-#data = remove_column(data, "sex")
-
-# view examples in dataset
-#data.head()
 
