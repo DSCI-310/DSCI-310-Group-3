@@ -4,6 +4,10 @@
 #' 
 #' @param raw-data a local path to read data from
 #' @param clean-data a local path/filename to save clean data as csv file
+#' @export
+#'
+#' @examples
+#' python ./src/process_data.py "data/adult.data" "./data/adult.data' 
 
 
 import pandas as pd
