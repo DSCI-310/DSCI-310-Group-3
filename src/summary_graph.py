@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-#' python ./src/process_data.py "data/adult.data" "./data/adult.data' 
+#' python ./src/process_data.py "data/adult.data" "./data/graph.data" 
 
 
 import pandas as pd
@@ -35,46 +35,10 @@ new_df = pd.DataFrame(data)
 new_df.to_csv('chart')
 
 
-#import pandas as pd
-#from src.remove_column import remove_column
-#import argparse
-
-#parser = argparse.ArgumentParser(description='Reads and cleans data')
-#parser.add_argument('raw_data', metavar='source', type=str, help='a local path/filename pointing to the raw data')
-
-#parser.add_argument('clean_data', metavar='path', type=str, help='a local path/filename pointing to the clean data')
-
-#args = parser.parse_args()
-#raw_data = args.raw_data
-#clean_data = args.clean_data
 
 
-#df = pd.read_csv(raw_data, header=None)
 
 
-#def clean_data(df):
-#    names = ['age',
-#        'workclass',
-#        'fnlwgt',
-#        'education',
-#        'education-num',
-#        'marital-status',
-#        'occupation',
-#        'relationship',
-#        'race',
-#        'sex',
-#        'capital-gain',
-#        'capital-loss',
-#        'hours-per-week',
-#        'native-country',
-#        'income']
-#    df.columns = names
-#    df = remove_column(raw_data, "race")
-#    df = remove_column(raw_data, "sex")
-#    return df
-
-#new_data = clean_data(df)
-#new_data.to_csv('clean_data')
 
 
 
