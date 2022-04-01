@@ -10,7 +10,7 @@
 #' @export
 #'
 #' @examples
-#' python ./src/download_data.py 'https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data' './data/adult.data' 
+#' python ./src/download_data.py https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data ./data/adult.data 
 import argparse
 import shutil
 import requests
