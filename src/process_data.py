@@ -1,6 +1,7 @@
 #' Format dataframe and save it 
 #'
-#' Assign column names and remove unused columns, then resave as a new csv, renaming the old data csv instead of deleting
+#' Assign column names and remove unused columns, then resave as a new csv, renaming the old data csv instead of deleting.
+#' Saves copies of data filtered for specific countries for analysis in same location
 #' 
 #' @param source the local path of the downloaded data csv
 #'
@@ -19,6 +20,7 @@ import pandas as pd
 import sys
 sys.path.append("..")
 from remove_column import remove_column
+from filter import filter as fil
 
 parser = argparse.ArgumentParser(description='Load data from provided path and process it for analysis')
 parser.add_argument('source', metavar='source', type=str, help='path to downloaded data')
@@ -59,9 +61,16 @@ if (os.path.exists(source)):
     data = remove_column(data, "race")
     data = remove_column(data, "sex")
 
-    
     # save processed data
     data.to_csv(source, index = None, header=True)
+    
+    data_Canada = fil(data, 'native-country', 'Canada')
+    source_Canada =  source + '_canada.data'
+    data_Canada.to_csv(source_Canada, index = None, header=True)
+    
+    data_USA = fil(data, 'native-country', 'United-States')
+    source_USA = source + '_usa.data'
+    data_USA.to_csv(source_USA, index = None, header=True)
     
 else:
     print("Data not found")
