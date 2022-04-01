@@ -9,9 +9,11 @@
 #' @export
 #'
 #' @examples
-#' python ./src/process_data.py "data/adult.data" 
+#' python ./src/process_data.py data/adult.data
 import argparse
 import os
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 import pandas as pd
 
 import sys
@@ -27,7 +29,7 @@ source = args.source
 if (os.path.exists(source)):
     
     # load data, specifying there are no column names included in a header
-    data = pd.read_csv(source, header=None)
+    data = pd.read_csv(source, header=None, index_col=0)
     
     # save a copy of it at the new location
     new = source + '_unprocessed.data'
