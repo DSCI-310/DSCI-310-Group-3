@@ -39,7 +39,7 @@ y_col = df[y]
 
 m, b = regression(x_col, y_col)
 
-plt.scatter(x_col, y_col, color = "#66DEFF")
-plt.plot(x_col, m*x_col+b, color = "#F57C36")
+plt.scatter(x_col, y_col, color = "#112E51")
+plt.plot(x_col, m*x_col+b, color = "#FF7043")
 
 plt.savefig(path)

@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+  File "/Users/damienfung/miniforge3/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/Users/damienfung/miniforge3/lib/python3.9/site-packages/nbclient/client.py", line 1112, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/damienfung/miniforge3/lib/python3.9/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/damienfung/miniforge3/lib/python3.9/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/Users/damienfung/miniforge3/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/Users/damienfung/miniforge3/lib/python3.9/site-packages/nbclient/client.py", line 553, in async_execute
+    await self.async_execute_cell(
+  File "/Users/damienfung/miniforge3/lib/python3.9/site-packages/nbclient/client.py", line 857, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/Users/damienfung/miniforge3/lib/python3.9/site-packages/nbclient/client.py", line 760, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+ed = data['education-num']
+hours = data['hours-per-week']
+m, b = regression(ed, hours)
+
+# Only preschool
+glue("preschool", round(m*1+b, 2)
+# bachelors
+glue("bachelors", round(m*13+b, 2)
+# doctorates
+glue("doctorates", round(m*16+b, 2)
+# 1 education-num is close to 2 years in school at the end of the scale. So, 20 is equivalent to 3 doctorates:
+glue("3_doctorates", round(m*20+b, 2)
+------------------
+
+[0;36m  File [0;32m"/var/folders/z3/qxmt5p091j740tg8qvftrdsm0000gn/T/ipykernel_27570/3745982407.py"[0;36m, line [0;32m8[0m
+[0;31m    glue("bachelors", round(m*13+b, 2)[0m
+[0m    ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+
+SyntaxError: invalid syntax (3745982407.py, line 8)
+
