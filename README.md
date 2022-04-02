@@ -46,11 +46,13 @@ The analysis used in this project can be reproduced through Docker.
 - Clone this git repository by using one of the following methods in terminal:
     - `git clone git@github.com:DSCI-310/DSCI-310-Group-3.git`
     - `git clone https://github.com/DSCI-310/DSCI-310-Group-3.git`
-    - **OR** pasting either `git@github.com:DSCI-310/DSCI-310-Group-3.git` or `https://github.com/DSCI-310/DSCI-310-Group-3.git` into a version control interface
+    - **OR** pasting either `git@github.com:DSCI-310/DSCI-310-Group-3.git` or `https://github.com/DSCI-310/DSCI-310-Group-3.git` into a git version control interface
 - Install Docker
 - Navigate to the root of this project
 - To run this project non-interactively, run the following command in your terminal
-`docker run -it --rm -p 8888:8888 -v /$(pwd):/home/education-hours-worked fungd2/dsci-310-group-3`
+`docker run -it --rm -p 8888:8888 -v "/$(pwd):/home/education-hours-worked" fungd2/dsci-310-group-3 make - C /home/education-hours-worked all`
+- To reset the analysis run the following command in your terminal
+`docker run -it --rm -p 8888:8888 -v "/$(pwd):/home/education-hours-worked" fungd2/dsci-310-group-3 make - C /home/education-hours-worked clean`
 
 The code can be tested by running `pytest tests` from the main directory. As several pandas functions return warnings due to deprecations or to specify their usage, some of the tests that pass are noted as returning these warnings instead.
 
