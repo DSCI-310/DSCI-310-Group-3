@@ -317,83 +317,295 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="data">
 <h4>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h4>
 <p>Data is stored in a 4mb .data file from <a class="reference external" href="https://archive-beta.ics.uci.edu/ml/datasets/census+income">https://archive-beta.ics.uci.edu/ml/datasets/census+income</a>, which functions as a .csv file. The column names, as well as other information on the dataset, are in the accompanying .names file.</p>
-<p>The education-num data is not the years spent in formal education, but an ordinal representation of the education category. Matching the values by counting the number of occurrences in the data, we can find the intended pairs:</p>
-<p><strong>Education Numbers Meaning</strong>:</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Number</p></th>
-<th class="head"><p><strong>1</strong></p></th>
-<th class="head"><p><strong>2</strong></p></th>
-<th class="head"><p><strong>3</strong></p></th>
-<th class="head"><p><strong>4</strong></p></th>
-<th class="head"><p><strong>5</strong></p></th>
-<th class="head"><p><strong>6</strong></p></th>
-<th class="head"><p><strong>7</strong></p></th>
-<th class="head"><p><strong>8</strong></p></th>
-<th class="head"><p><strong>9</strong></p></th>
-<th class="head"><p><strong>10</strong></p></th>
-<th class="head"><p><strong>11</strong></p></th>
-<th class="head"><p><strong>12</strong></p></th>
-<th class="head"><p><strong>13</strong></p></th>
-<th class="head"><p><strong>14</strong></p></th>
-<th class="head"><p><strong>15</strong></p></th>
-<th class="head"><p><strong>16</strong></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Meaning</p></td>
-<td><p>Preschool</p></td>
-<td><p>1st-4th</p></td>
-<td><p>5th-6th</p></td>
-<td><p>7th-8th</p></td>
-<td><p>9th</p></td>
-<td><p>10th</p></td>
-<td><p>11th</p></td>
-<td><p>12th</p></td>
-<td><p>HS-grad</p></td>
-<td><p>Some-college</p></td>
-<td><p>Assoc-voc</p></td>
-<td><p>Assoc-acdm</p></td>
-<td><p>Bachelors</p></td>
-<td><p>Masters</p></td>
-<td><p>Prof-school</p></td>
-<td><p>Doctorate</p></td>
-</tr>
-</tbody>
+<div class="figure align-default" id="dataset" style="width: 800px">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>workclass</th>
+      <th>fnlwgt</th>
+      <th>education</th>
+      <th>education-num</th>
+      <th>marital-status</th>
+      <th>occupation</th>
+      <th>relationship</th>
+      <th>capital-gain</th>
+      <th>capital-loss</th>
+      <th>hours-per-week</th>
+      <th>native-country</th>
+      <th>income</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>39</td>
+      <td>State-gov</td>
+      <td>77516</td>
+      <td>Bachelors</td>
+      <td>13</td>
+      <td>Never-married</td>
+      <td>Adm-clerical</td>
+      <td>Not-in-family</td>
+      <td>2174</td>
+      <td>0</td>
+      <td>40</td>
+      <td>United-States</td>
+      <td>&lt;=50K</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>50</td>
+      <td>Self-emp-not-inc</td>
+      <td>83311</td>
+      <td>Bachelors</td>
+      <td>13</td>
+      <td>Married-civ-spouse</td>
+      <td>Exec-managerial</td>
+      <td>Husband</td>
+      <td>0</td>
+      <td>0</td>
+      <td>13</td>
+      <td>United-States</td>
+      <td>&lt;=50K</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>38</td>
+      <td>Private</td>
+      <td>215646</td>
+      <td>HS-grad</td>
+      <td>9</td>
+      <td>Divorced</td>
+      <td>Handlers-cleaners</td>
+      <td>Not-in-family</td>
+      <td>0</td>
+      <td>0</td>
+      <td>40</td>
+      <td>United-States</td>
+      <td>&lt;=50K</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>53</td>
+      <td>Private</td>
+      <td>234721</td>
+      <td>11th</td>
+      <td>7</td>
+      <td>Married-civ-spouse</td>
+      <td>Handlers-cleaners</td>
+      <td>Husband</td>
+      <td>0</td>
+      <td>0</td>
+      <td>40</td>
+      <td>United-States</td>
+      <td>&lt;=50K</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>28</td>
+      <td>Private</td>
+      <td>338409</td>
+      <td>Bachelors</td>
+      <td>13</td>
+      <td>Married-civ-spouse</td>
+      <td>Prof-specialty</td>
+      <td>Wife</td>
+      <td>0</td>
+      <td>0</td>
+      <td>40</td>
+      <td>Cuba</td>
+      <td>&lt;=50K</td>
+    </tr>
+  </tbody>
 </table>
+</div></div></div>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Cleaned dataset</span><a class="headerlink" href="#dataset" title="Permalink to this image">¶</a></p>
+</div>
+<p>The education-num data is not the years spent in formal education, but an ordinal representation of the education category. Matching the values by counting the number of occurrences in the data, we can find the intended pairs:</p>
+<div class="figure align-default" id="legend" style="width: 800px">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Number</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+      <th>13</th>
+      <th>14</th>
+      <th>15</th>
+      <th>16</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Meaning</td>
+      <td>Preschool</td>
+      <td>1st-4th</td>
+      <td>5th-6th</td>
+      <td>7th-8th</td>
+      <td>9th</td>
+      <td>10th</td>
+      <td>11th</td>
+      <td>12th</td>
+      <td>HS-grad</td>
+      <td>Some-college</td>
+      <td>Assoc-voc</td>
+      <td>Assoc-adm</td>
+      <td>Bachelors</td>
+      <td>Masters</td>
+      <td>Prof-school</td>
+      <td>Doctorate</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Education Numbers Meaning</span><a class="headerlink" href="#legend" title="Permalink to this image">¶</a></p>
+</div>
 <div class="figure align-default" id="ed-hours-plot">
 <a class="reference internal image-reference" href="_images/ed_hours_plot.png"><img alt="_images/ed_hours_plot.png" src="_images/ed_hours_plot.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Level of Education vs Hours Worked per Week</span><a class="headerlink" href="#ed-hours-plot" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Level of Education vs Hours Worked per Week (All individuals)</span><a class="headerlink" href="#ed-hours-plot" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="canada-plot">
 <a class="reference internal image-reference" href="_images/canada_plot.png"><img alt="_images/canada_plot.png" src="_images/canada_plot.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Level of Education vs Hours Worked per Week (Canadians only)</span><a class="headerlink" href="#canada-plot" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Level of Education vs Hours Worked per Week (Canadians only)</span><a class="headerlink" href="#canada-plot" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="usa-plot">
 <a class="reference internal image-reference" href="_images/usa_plot.png"><img alt="_images/usa_plot.png" src="_images/usa_plot.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Level of Education vs Hours Worked per Week (Americans only)</span><a class="headerlink" href="#usa-plot" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Level of Education vs Hours Worked per Week (Americans only)</span><a class="headerlink" href="#usa-plot" title="Permalink to this image">¶</a></p>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: EMBED PRESECHOOL, BACHELORS, DOCTORATES AND 3 DOCTORATES INLINE</span>
-</pre></div>
-</div>
-</div>
+<div class="figure align-default" id="table" style="width: 600px">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>All individuals</th>
+      <th>Canadians</th>
+      <th>Americans</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Preschool</td>
+      <td>33.98</td>
+      <td>41.38</td>
+      <td>32.75</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Bachelors</td>
+      <td>42.51</td>
+      <td>40.17</td>
+      <td>42.82</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Doctorate</td>
+      <td>44.65</td>
+      <td>39.87</td>
+      <td>45.34</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3 Doctorates</td>
+      <td>47.49</td>
+      <td>39.46</td>
+      <td>48.70</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Level of education vs population subsets</span><a class="headerlink" href="#table" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="discussion">
 <h2>Discussion:<a class="headerlink" href="#discussion" title="Permalink to this headline">¶</a></h2>
-<p>Looking at <a class="reference internal" href="#ed-hours-plot"><span class="std std-numref">Fig. 1</span></a>, we can that there is a positive correlation between education level and hours worked. Someone with minimal education would likely not have a full time job, and people with bachelors or doctorates tend to work slightly more (This could be due to most working exactly 40, and some working many more). Following the trend to a higher number like 20, a rough equivalent of 3 PhDs, brings us to an estimate of 47.49 hours worked a week.</p>
+<p>Looking at <a class="reference internal" href="#ed-hours-plot"><span class="std std-numref">Fig. 3</span></a>, we can that there is a positive correlation between education level and hours worked. Someone with minimal education would likely not have a full time job (i.e preschool has an estimate of <span class="pasted-text">33.98</span> hours worked, and people with bachelors or doctorates tend to work slightly more (<span class="pasted-text">42.51</span> and <span class="pasted-text">44.65</span> hours worked respectively) (This could be due to most working exactly 40, and some working many more). Following the trend to a higher number like 20, a rough equivalent of 3 PhDs, brings us to an estimate of <span class="pasted-text">47.49</span> hours worked a week.</p>
 <p>There are many possible explanations as to why this exists. One possibility is that this is caused by students still in school, who have low education levels and would only work part time. Another is that jobs with lower education requirements do not allow for advancement to full time work, or that jobs with higher requirements are more demanding.</p>
-<p>However we can also see that our predictive model is misleading as the model predicts that pre-school kids work 33.98 hours  per week. We know that this is incorrect. This does not mean that people in pre-school work 33.98 hours a week but that people that only completed pre-school and nothing else sometime in the past now work that many hours.</p>
-<p>Looking at the graphs for Canada (<a class="reference internal" href="#canada-plot"><span class="std std-numref">Fig. 2</span></a>) and USA (<a class="reference internal" href="#usa-plot"><span class="std std-numref">Fig. 3</span></a>) only, we can see that there actually is a negative correlation between hours worked and education level. This can be because at higher education levels you may still be spending a lot of time studying rather than learning hence your hours stay the same. The working hours for education level are almost consistent at 40hrs which is the standard full time job in Canada and USA hence it makes sense that it is consistent with all education levels as it just means everyone is working standard full time hours.</p>
+<p>However we can also see that our predictive model is misleading as the model predicts that pre-school kids work <span class="pasted-text">33.98</span> hours per week. We know that this is incorrect. This does not mean that people in pre-school work <span class="pasted-text">33.98</span> hours a week but that people that only completed pre-school and nothing else sometime in the past now work that many hours.</p>
+<p>Looking at the graphs for Canadians (<a class="reference internal" href="#canada-plot"><span class="std std-numref">Fig. 4</span></a>) and Americans (<a class="reference internal" href="#usa-plot"><span class="std std-numref">Fig. 5</span></a>) only, we can see that there actually is a negative correlation between hours worked and education level. This can be because at higher education levels you may still be spending a lot of time studying rather than learning hence your hours stay the same. The working hours for education level are almost consistent at 40hrs which is the standard full time job in Canada and USA hence it makes sense that it is consistent with all education levels as it just means everyone is working standard full time hours.</p>
 <p>Analyzing other variables in this data-set such as age could offer hints as to which explanation is correct. To be certain and to distinguish if this is truly causation or just correlation would likely require gathering more detailed data from other sources.</p>
 </div>
 <div class="section" id="references">
 <h2>References:<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="id1"></span></div>
+<p><span id="id1">[<a class="reference internal" href="#id3" title="Alexander Bick, Nicola Fuchs-Schündeln, and David Lagakos. How do hours worked vary with income? cross-country evidence and implications. The American Economic Review, 108(1):170-199, 01 2018. Copyright - Copyright American Economic Association Jan 2018; Last updated - 2021-07-16. URL: https://www.proquest.com/scholarly-journals/how-do-hours-worked-vary-with-income-cross/docview/1983245870/se-2.">BFSL18</a>, <a class="reference internal" href="#id4" title="Robert A Boswell. Model programs for stem student success at minority serving two-year colleges. Fostering Success of Ethnic and Racial Minorities in STEM, pages 81-93, 2013. doi:10.4324/9780203181034-10.">Bos13</a>, <a class="reference internal" href="#id5" title="Orsetta Causa. Explaining differences in hours worked among oecd countries. OECD Economics Department Working Papers, 2008. doi:10.1787/244230044118.">Cau08</a>, <a class="reference internal" href="#id6" title="James J Heckman. The economics of inequality. Education Digest, 77(4):4-11, Dec 2011.">Hec11</a>]</span></p>
+<p id="id2"><dl class="citation">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">BFSL18</a></span></dt>
+<dd><p>Alexander Bick, Nicola Fuchs-Schündeln, and David Lagakos. How do hours worked vary with income? cross-country evidence and implications. <em>The American Economic Review</em>, 108(1):170–199, 01 2018. Copyright - Copyright American Economic Association Jan 2018; Last updated - 2021-07-16. URL: <a class="reference external" href="https://www.proquest.com/scholarly-journals/how-do-hours-worked-vary-with-income-cross/docview/1983245870/se-2">https://www.proquest.com/scholarly-journals/how-do-hours-worked-vary-with-income-cross/docview/1983245870/se-2</a>.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">Bos13</a></span></dt>
+<dd><p>Robert A Boswell. Model programs for stem student success at minority serving two-year colleges. <em>Fostering Success of Ethnic and Racial Minorities in STEM</em>, pages 81–93, 2013. <a class="reference external" href="https://doi.org/10.4324/9780203181034-10">doi:10.4324/9780203181034-10</a>.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">Cau08</a></span></dt>
+<dd><p>Orsetta Causa. Explaining differences in hours worked among oecd countries. <em>OECD Economics Department Working Papers</em>, 2008. <a class="reference external" href="https://doi.org/10.1787/244230044118">doi:10.1787/244230044118</a>.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id1">Hec11</a></span></dt>
+<dd><p>James J Heckman. The economics of inequality. <em>Education Digest</em>, 77(4):4–11, Dec 2011.</p>
+</dd>
+</dl>
+</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
