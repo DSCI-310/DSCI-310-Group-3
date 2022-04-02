@@ -42,6 +42,11 @@ Analyzing other variables in this data-set such as age could offer hints as to w
 
 ## Usage
 The analysis used in this project can be reproduced through Docker.
+- Install git
+- Clone this git repository by using one of the following methods in terminal:
+    - `git clone git@github.com:DSCI-310/DSCI-310-Group-3.git`
+    - `git clone https://github.com/DSCI-310/DSCI-310-Group-3.git`
+    - **OR** pasting either `git@github.com:DSCI-310/DSCI-310-Group-3.git` or `https://github.com/DSCI-310/DSCI-310-Group-3.git` into a version control interface
 - Install Docker
 - Navigate through terminal to the root director of this project
 - Run the following commands to run the Docker container:
