@@ -50,7 +50,7 @@ The analysis used in this project can be reproduced through Docker.
 - Install Docker
 - Navigate to the root of this project
 - To run the docker container, run the following command in your terminal
-- `docker run -it --rm -p 8888:8888 -v "/$(pwd):/home" -e JUPYTER_TOKEN=password fungd2/dsci-310-group-3`
+```docker run -it --rm -p 8888:8888 -v "/$(pwd):/home/jovyan/work" -e PASSWORD=password fungd2/dsci-310-group-3```
 - This should generate 3 methods of opening the analysis in the form. Use one of these 3 methods (We found that method 3 works best)
 ```
 To access the server, open this file in a browser:
@@ -59,8 +59,9 @@ To access the server, open this file in a browser:
         http://6dcf1a3e8deb:8888/lab?token={token}
      or http://127.0.0.1:8888/lab?token={token}
 ```
-- OR: go to http://localhost:8888/lab
-- If a prompt asking for a password, enter `password` in the password prompt
+- If a prompt asking for a password, enter `password` in the password prompt 
+    OR
+- enter the {token} as give in the above reference as a password instead
 
 The code can be tested by running `pytest tests` from the main directory. As several pandas functions return warnings due to deprecations or to specify their usage, some of the tests that pass are noted as returning these warnings instead.
 
