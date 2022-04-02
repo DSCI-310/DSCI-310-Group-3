@@ -1,6 +1,6 @@
 # DSCI-310-Group-3
 
-Analyzing Education's Effect on Capital Gains
+Analyzing Education's Effect on Hours Worked
 
 Contributors: Alex Khadra, Damien Fung, Ryan Lazenby
 
@@ -48,18 +48,9 @@ The analysis used in this project can be reproduced through Docker.
     - `git clone https://github.com/DSCI-310/DSCI-310-Group-3.git`
     - **OR** pasting either `git@github.com:DSCI-310/DSCI-310-Group-3.git` or `https://github.com/DSCI-310/DSCI-310-Group-3.git` into a version control interface
 - Install Docker
-- Navigate through terminal to the root director of this project
-- Run the following commands to run the Docker container:
-    - `docker pull fungd2/dsci-310-group-3`
-    - `docker run --rm  -p 8888:8888 -e PASSWORD="apassword" fungd2/dsci-310-group-3`
-- go to http://localhost:8888 and navigate to the `docs` directory to use the project's notebook
-
-In the case that does not work, you can try:
-- `git clone https://github.com/DSCI-310/DSCI-310-Group-3.git`
-
-- `docker build --tag dsci-310-project DSCI-310-Group-3`
-
-- `docker run -it dsci-310-project`
+- Navigate to the root of this project
+- To run this project non-interactively, run the following command in your terminal
+`docker run -it --rm -p 8888:8888 -v /$(pwd):/home/education-hours-worked fungd2/dsci-310-group-3`
 
 The code can be tested by running `pytest tests` from the main directory. As several pandas functions return warnings due to deprecations or to specify their usage, some of the tests that pass are noted as returning these warnings instead.
 
