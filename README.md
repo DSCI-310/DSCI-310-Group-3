@@ -63,6 +63,12 @@ To access the server, open this file in a browser:
     OR
 - enter the {token} as give in the above reference as a password instead
 
+
+After entering the jupyter container, press `Terminal`, then enter `cd work` followed by `make clean` and `make all` in the jupyter terminal prompt
+
+After these steps, the final report can be accessed in the /docs/_build/
+
+
 The code can be tested by running `pytest tests` from the main directory. As several pandas functions return warnings due to deprecations or to specify their usage, some of the tests that pass are noted as returning these warnings instead.
 
 This project uses the MIT license for its code and the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) license for the analysis.
