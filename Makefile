@@ -27,4 +27,6 @@ docs/_build/html/index.html: docs/_config.yml docs/_toc.yml docs/analyze_census_
 
 # remove all created files
 clean:
-	rm -f data/adult.data data/adult.data_unprocessed.data data/ed_hours_plot.png data/canada_plot.png data/usa_plot.png
+	rm -f data/adult.data data/adult.data_unprocessed.data data/ed_hours_plot.png data/canada_plot.png data/usa_plot.png data/adult.data_canada.data data/adult.data_usa.data
+	rm -r docs/_build/*
+	rm -r docs/_build/.doctrees
