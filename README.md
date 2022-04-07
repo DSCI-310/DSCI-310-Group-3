@@ -50,7 +50,12 @@ The analysis used in this project can be reproduced through Docker.
 - Install Docker
 - Navigate to the root of this project
 - To run the docker container, run the following command in your terminal
-```docker run -it --rm -p 8888:8888 -v "/$(pwd):/home/jovyan/work" -e PASSWORD=password fungd2/dsci-310-group-3```
+```
+docker run -it --rm\
+    -p 8888:8888\
+    -v "/$(pwd):/home/jovyan/work"\
+    -e PASSWORD=password fungd2/dsci-310-group-3
+```
 - This should generate 3 methods of opening the analysis in the form. Use one of these 3 methods (We found that method 3 works best)
 ```
 To access the server, open this file in a browser:
