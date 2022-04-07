@@ -71,7 +71,7 @@ To access the server, open this file in a browser:
 
 After entering the jupyter container, press `Terminal`, then enter `cd work` followed by `make clean` and `make all` in the jupyter terminal prompt
 
-After these steps, the final report can be accessed in the /docs/_build/
+After these steps, the final report can be accessed in /docs/_build/html/analyze_census_data.html
 
 
 The code can be tested by running `pytest tests` from the main directory. As several pandas functions return warnings due to deprecations or to specify their usage, some of the tests that pass are noted as returning these warnings instead.
