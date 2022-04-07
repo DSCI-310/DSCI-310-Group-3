@@ -50,7 +50,12 @@ The analysis used in this project can be reproduced through Docker.
 - Install Docker
 - Navigate to the root of this project
 - To run the docker container, run the following command in your terminal
-```docker run -it --rm -p 8888:8888 -v "/$(pwd):/home/jovyan/work" -e PASSWORD=password fungd2/dsci-310-group-3```
+```
+docker run -it --rm\
+    -p 8888:8888\
+    -v "/$(pwd):/home/jovyan/work"\
+    -e PASSWORD=password fungd2/dsci-310-group-3
+```
 - This should generate 3 methods of opening the analysis in the form. Use one of these 3 methods (We found that method 3 works best)
 ```
 To access the server, open this file in a browser:
@@ -66,7 +71,7 @@ To access the server, open this file in a browser:
 
 After entering the jupyter container, press `Terminal`, then enter `cd work` followed by `make clean` and `make all` in the jupyter terminal prompt
 
-After these steps, the final report can be accessed in the /docs/_build/
+After these steps, the final report can be accessed in /docs/_build/html/analyze_census_data.html
 
 
 The code can be tested by running `pytest tests` from the main directory. As several pandas functions return warnings due to deprecations or to specify their usage, some of the tests that pass are noted as returning these warnings instead.
