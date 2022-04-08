@@ -6,6 +6,7 @@ import sys
 sys.path.append(".")
 from src.filter import filter as f
 
+#Creating data frames for testing
 df = pd.DataFrame({'a': ["Foo", "Bar"], 'b' : [1, 2]})
 expected = pd.DataFrame({'a': ["Foo"], 'b' : [1]})
 

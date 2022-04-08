@@ -7,12 +7,12 @@ from src.remove_column import remove_column as rc
 
 #test the remove_column function in the remove_column.py file
 
-# assign data of lists.  
+# create testing data  
 data = {'Name': ['Tom', 'Joseph', 'Krish', 'John'], 'Age': [20, 21, 19, 18]}
 data_a = {'Name': ['Tom', 'Joseph', 'Krish', 'John']}
 data_b = {'Age': [20, 21, 19, 18]}
   
-# Create DataFrame
+# Create DataFrame from above data
 df = pd.DataFrame(data)
 expected_a = pd.DataFrame(data_a)
 expected_b = pd.DataFrame(data_b)
