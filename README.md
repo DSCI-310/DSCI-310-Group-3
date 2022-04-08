@@ -32,6 +32,8 @@ The code needed to run the analysis is included in the analysis.ipynb file, and 
 - numpy=1.22.2
 - matplotlib=3.5.1
 - pandas=1.4.1
+- pytest=6.2.5
+- jupyter-book=0.12.3
 
 Through our analysis, as seen in the `analyze_census_data.ipynb` we can that there is a positive correlation between education level and hours worked. Someone with minimal education would likely not have a full time job, and people with bachelors or doctorates tend to work slightly more (This could be due to most working exactly 40, and some working many more). Following the trend to a higher number like 20, a rough equivalent of 3 PhDs, 
 
