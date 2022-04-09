@@ -8,4 +8,4 @@ RUN conda install -c conda-forge jupyter-book=0.12.3
 
 # Install package
 RUN git clone https://github.com/DSCI-310/DSCI-310-Group-3-Package.git
-RUN pip install ./group3package/dist/group3package-1.0.0-py3-none-any.whl
+RUN pip install ./DSCI-310-Group-3-Package/group3package/dist/group3package-1.0.0-py3-none-any.whl
