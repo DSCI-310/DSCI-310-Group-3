@@ -58,6 +58,10 @@ docker run -it --rm\
     -v "/$(pwd):/home/jovyan/work"\
     -e PASSWORD=password fungd2/dsci-310-group-3
 ```
+Or, if the quotes cause issues,
+```
+docker run -it -p 8888:8888 -v /$(pwd):/home/jovyan/work -e PASSWORD=password fungd2/dsci-310-group-3
+```
 - This should generate 3 methods of opening the analysis in the form. Use one of these 3 methods (We found that method 3 works best)
 ```
 To access the server, open this file in a browser:
@@ -71,11 +75,11 @@ To access the server, open this file in a browser:
 - enter the {token} as give in the above reference as a password instead
 
 
-After entering the jupyter container, press `Terminal`, then enter `cd work` followed by `make clean` and `make all` in the jupyter terminal prompt
+After entering the jupyter container, press `Terminal`, then enter `cd DSCI-310-Group-3` followed by `make clean` and `make all` in the jupyter terminal prompt. If you find an error about needing a data folder, add one using the jupyter sidebar inside the DSCI-310-Group-3 folder and try again.
 
 After these steps, the final report can be accessed in /docs/_build/html/analyze_census_data.html
 
 
-The code can be tested by running `pytest tests` from the main directory. As several pandas functions return warnings due to deprecations or to specify their usage, some of the tests that pass are noted as returning these warnings instead.
+The package code can be tested by running `pytest tests` from the DSCI-310-Group-3-Package directory. As several pandas functions return warnings due to deprecations or to specify their usage, some of the tests that pass are noted as returning these warnings instead.
 
 This project uses the MIT license for its code and the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) license for the analysis.
