@@ -18,9 +18,8 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 import pandas as pd
 
 import sys
-sys.path.append("..")
-from remove_column import remove_column
-from filter import filter as fil
+from group3package.remove_column import remove_column as rc
+from group3package.filter import filter as fil
 
 parser = argparse.ArgumentParser(description='Load data from provided path and process it for analysis')
 parser.add_argument('source', metavar='source', type=str, help='path to downloaded data')
@@ -58,8 +57,8 @@ if (os.path.exists(source)):
     data.columns = names
 
     # drop some unused columns
-    data = remove_column(data, "race")
-    data = remove_column(data, "sex")
+    data = rc(data, "race")
+    data = rc(data, "sex")
 
     # save processed data
     data.to_csv(source, index = None, header=True)
