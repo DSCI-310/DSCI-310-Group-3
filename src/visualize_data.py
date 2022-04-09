@@ -19,7 +19,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-from regression import regression
+from group3package.regression import regression
 
 parser = argparse.ArgumentParser(description='Download data from a source (either URL or relative local path) and save it locally to provided relative local path')
 parser.add_argument('source', metavar='source', type=str, help='a local path/filename pointing to the data')
